@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soham Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+</head>
+<link rel="stylesheet" href="styles.css">
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Soham's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="main">
+            <div class="contactform">
+                <h1>Contact me for Work/General Enquires</h1>
+                <form name="submit-to-google-sheet" style="
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: space-evenly;
+    align-items: flex-start;
+">
+                    <div class="mb-3">
+                        <label for="clientemail" class="form-label">Email address</label>
+                        <input type="email" name="Email" class="form-control" id="clientemail"
+                            aria-describedby="emailHelp" style="
+                        width: 20vw;
+                        border-radius: 5px;
+                        font-size: 20px;
+                        ">
+                        <div id="emailHelp" class="form-text">We'll never share your email & phone number with anyone
+                            else.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="clientphone" class="form-label">Phone</label>
+                        <input type="tel" name="Phone" class="form-control" id="clientphone" style="
+                        width: 20vw;
+                        border-radius: 5px;
+                        font-size: 20px;
+                        ">
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="isclient">
+                        <label class="form-check-label" for="isclient">You want to work on a project with me</label>
+                    </div>
+                    <button type="submit" class="btn-btn-primary" style="
+    margin: 6px 120px;
+">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </header>
+    <section class="contactsecondSection">
+
+    </section>
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                <h3>Soham's Developer Portfolio</h3>
+            </div>
+            <div class="footer-second">
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/soham-gadekar-009460257/">LinkedIn</a></li>
+                    <li><a href="https://leetcode.com/u/user1934QN/">LeetCode</a></li>
+                </ul>
+            </div>
+            <div class="footer-third">
+                <ul>
+                    <li><a href="https://github.com/SOHAM-3456">GitHub</a></li>
+                    <li><a href="https://www.hackerrank.com/profile/sohamg_3456">HackerRank</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-rights">
+            Copyright &#169; www.sohamsportfolio.com | All rights reserved
+        </div>
+    </footer>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxAmmiGU78iMFMlI4saVxD8vQRpvdnetu2OBCft0me8gc7gKHhJ2HpoM0ENBENvZPDL/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Message sent successfully"
+                    setTimeout(() => {
+                         msg.innerHTML = ""
+                    }, 2000);
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+</body>
+</html>

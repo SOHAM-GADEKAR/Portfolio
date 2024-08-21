@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soham Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+</head>
+<link rel="stylesheet" href="styles.css">
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Soham's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!--------------------------------second_section-------------------------------->
+    <section class="aboutfirstSection" style="
+    margin: 102px 0px 0px;
+">
+        <div class="aboutleftSection">
+            <img src="soham.png" alt="">
+        </div>
+        <div class="aboutrightSection">
+            <h1 style="font-size: 40px; font-weight: 600; ">About Me</h1>
+            <p>I am an enthusiastic third year Engineering student specializing in Computer Science at Dr. D. Y. Patil
+                Institute of
+                Technology, Pune. Passionate about coding and love for low level language C.</p>
+
+            <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                <p class="tab-links" onclick="opentab('projects')">Projects</p>
+                <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+                <ul>
+                    <li><span>C/C++ language</span><br>Successfully Completed C and C++ language Courses and solved over
+                        200+ questions.
+                    </li>
+
+                    <li><span>DSA</span><br>Gained knowledge about the data structures and the algorithms and used in
+                        real time projects.
+                    </li>
+
+                    <li><span>Event Management</span><br>Played a crucial role as a Event Manager and Successfully
+                        executed the event.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="tab-contents" id="projects">
+                <ul>
+                    <li><span>ATM System Project</span><br>Coded a ATM system project in C language using double
+                        pointers and dynamic memory allocation.
+                    </li>
+
+                    <li><span>Computer Engineering Website</span><br>Built a website for helping second year computer
+                        engineering
+                        students get resources at one place. Used by thousands of
+                        students.
+                    </li>
+
+                    <li><span>Sign Language Recognition</span><br>A PBL project using python and Machine Learning.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="tab-contents" id="education">
+                <ul>
+                    <li><span>Bachelor of Engineering</span><br>SPPU (Completing in 2026) <br>SGPA : <br> First Year :
+                        7.77 <br> Second Year : 9.05
+                    </li>
+
+                    <li><span>High School and Junior
+                            College</span><br>12th Grade : Priyadarshani Public School <br> Percentage : 76.83 <br>
+                        <br>10th Grade : Sacred Heart Convent High School <br>Percentage : 85.40
+                    </li>
+                </ul>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!------------------------------------footer------------------------------------------
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                <h3>Soham's Developer Portfolio</h3>
+            </div>
+            <div class="footer-second">
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/soham-gadekar-009460257/">LinkedIn</a></li>
+                    <li><a href="https://leetcode.com/u/user1934QN/">LeetCode</a></li>
+                </ul>
+            </div>
+            <div class="footer-third">
+                <ul>
+                    <li><a href="https://github.com/SOHAM-3456">GitHub</a></li>
+                    <li><a href="https://www.hackerrank.com/profile/sohamg_3456">HackerRank</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-rights">
+            Copyright &#169; www.sohamsportfolio.com | All rights reserved
+        </div>
+    </footer>
+--->
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+</body>
+
+</html>
