@@ -66,11 +66,11 @@ nav ul li a:hover {
 }
 
 .rightSection img {
-    height: 410px;
-    border-radius: 99px;
+     width: 437px;
+    height: 463px;
+    border-radius: 115px;
     background: rgb(7, 9, 60);
-    box-shadow: 10px 10px 20px purple,
-        -10px -10px 20px blueviolet;
+    box-shadow: 20px 10px 60px purple, -10px -10px 84px blueviolet;
 }
 
 .purple {
@@ -278,11 +278,11 @@ footer .footer-rights {
 }
 
 .aboutleftSection img {
-    margin: 68px 67px;
-    height: 389px;
-    border-radius: 99px;
+     width: 437px;
+    height: 463px;
+    border-radius: 115px;
     background: rgb(7, 9, 60);
-    box-shadow: 10px 10px 20px purple, -10px -10px 20px blueviolet;
+    box-shadow: 20px 10px 60px purple, -10px -10px 84px blueviolet;
 }
 
 .aboutfirstSection>div {
